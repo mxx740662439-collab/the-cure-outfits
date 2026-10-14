@@ -19,6 +19,7 @@ main,header,footer{padding-left:max(18px,env(safe-area-inset-left));padding-righ
 .chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
 .count{color:var(--muted);font-size:13px;margin:14px 0 4px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;padding:8px 0 40px}
+.card[hidden]{display:none}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
 .card-head{display:flex;justify-content:space-between;align-items:center;padding:11px 14px 0}
 .era{font-size:12.5px;color:var(--muted);font-weight:600}
@@ -47,7 +48,7 @@ dialog button{display:block;margin-left:auto;padding:8px 15px;border:1px solid v
 <body>
 <header>
   <h1>The Cure · Robert Smith &amp; Simon Gallup 演出服装图鉴</h1>
-  <p>按年代梳理两人历代舞台穿搭。照片均来自维基共享（Wikimedia Commons）自由授权真实现场照；早期个别年份无自由授权照片，已如实标注并附资料来源。点击图片可离线放大；资料来源链接在新页面打开。</p>
+  <p>按年代整理已收集的舞台穿搭，非完整历代清单。早期照片尚未补齐；Simon 约 1982 年皮夹克为待核线索，本轮未新增照片。现有图片来源为维基共享；未找到可用照片不等于该造型不存在。点击图片可离线放大；资料来源链接在新页面打开。</p>
 </header>
 <div class="controls">
   <input id="search" type="search" placeholder="搜索年代、单品、歌名、证据…" aria-label="搜索">
@@ -110,7 +111,7 @@ dialog button{display:block;margin-left:auto;padding:8px 15px;border:1px solid v
 <article class="card" data-member="robert" data-search="Robert 1978–1982 后朋克中性时期（短发倒梳萌芽） 1978–79 普通后朋克简装、短发；1980–83 短发开始倒梳蓬乱；整体中性/雌雄同体美学。尚未出现涂开红唇。 维基百科、传记《Ten Imaginary Years》纪录片；中–高。">
   <div class="card-head"><span class="era">1978–1982</span><span class="badge">Robert</span></div>
   <h3>后朋克中性时期（短发倒梳萌芽）</h3>
-  <figure class="nophoto"><div class="nophoto-box">无自由授权照片<br><small>参考来源见下方链接</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/Robert_Smith_(musician)" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
+  <figure class="nophoto"><div class="nophoto-box">暂未收录可用照片<br><small>不表示没有该造型；参考来源见下方</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/Robert_Smith_(musician)" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
   <p class="items">1978–79 普通后朋克简装、短发；1980–83 短发开始倒梳蓬乱；整体中性/雌雄同体美学。尚未出现涂开红唇。</p>
   <p class="evidence"><strong>证据：</strong>维基百科、传记《Ten Imaginary Years》纪录片；中–高。</p>
   <p class="src"><a href="https://en.wikipedia.org/wiki/Robert_Smith_(musician)" target="_blank" rel="noopener">资料来源 ↗</a></p>
@@ -118,7 +119,7 @@ dialog button{display:block;margin-left:auto;padding:8px 15px;border:1px solid v
 <article class="card" data-member="robert" data-search="Robert 1984 标志造型定型（乱发·红唇·黑衣） 借 Siouxsie 口红后于 1984 确立：苍白底妆＋涂开红唇＋黑眼线＋倒梳乱发＋全黑 oversized 衣＋creepers/运动鞋。 维基百科、MediatedWiki 引 Paul Morley；高。">
   <div class="card-head"><span class="era">1984</span><span class="badge">Robert</span></div>
   <h3>标志造型定型（乱发·红唇·黑衣）</h3>
-  <figure class="nophoto"><div class="nophoto-box">无自由授权照片<br><small>参考来源见下方链接</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/Robert_Smith_(musician)" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
+  <figure class="nophoto"><div class="nophoto-box">暂未收录可用照片<br><small>不表示没有该造型；参考来源见下方</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/Robert_Smith_(musician)" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
   <p class="items">借 Siouxsie 口红后于 1984 确立：苍白底妆＋涂开红唇＋黑眼线＋倒梳乱发＋全黑 oversized 衣＋creepers/运动鞋。</p>
   <p class="evidence"><strong>证据：</strong>维基百科、MediatedWiki 引 Paul Morley；高。</p>
   <p class="src"><a href="https://en.wikipedia.org/wiki/Robert_Smith_(musician)" target="_blank" rel="noopener">资料来源 ↗</a></p>
@@ -126,7 +127,7 @@ dialog button{display:block;margin-left:auto;padding:8px 15px;border:1px solid v
 <article class="card" data-member="robert" data-search="Robert 1986 短刺发＋亮色 Polo 衫（反常造型） 1986 年短暂改成短刺发＋亮色 Polo 衫登台/宣传照，曾登 MTV 头条，不久回归经典。 录像《The Cure in Orange》(1987) 法国 Orange 演唱会；高。">
   <div class="card-head"><span class="era">1986</span><span class="badge">Robert</span></div>
   <h3>短刺发＋亮色 Polo 衫（反常造型）</h3>
-  <figure class="nophoto"><div class="nophoto-box">无自由授权照片<br><small>参考来源见下方链接</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/The_Cure_in_Orange" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
+  <figure class="nophoto"><div class="nophoto-box">暂未收录可用照片<br><small>不表示没有该造型；参考来源见下方</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/The_Cure_in_Orange" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
   <p class="items">1986 年短暂改成短刺发＋亮色 Polo 衫登台/宣传照，曾登 MTV 头条，不久回归经典。</p>
   <p class="evidence"><strong>证据：</strong>录像《The Cure in Orange》(1987) 法国 Orange 演唱会；高。</p>
   <p class="src"><a href="https://en.wikipedia.org/wiki/The_Cure_in_Orange" target="_blank" rel="noopener">资料来源 ↗</a></p>
@@ -134,7 +135,7 @@ dialog button{display:block;margin-left:auto;padding:8px 15px;border:1px solid v
 <article class="card" data-member="robert" data-search="Robert 1989 《Disintegration》哥特期（手工黑长袖衬衫） 经典哥特：乱发、涂开红唇、黑眼影、苍白； Prayer Tour 期间请裁缝做 5 件手工黑色长袖纽扣衬衫，每场穿一件（2019 悉尼重穿）。 Robert 自述＋Bonhams/Oxfam 拍卖实物衬衫；高。">
   <div class="card-head"><span class="era">1989</span><span class="badge">Robert</span></div>
   <h3>《Disintegration》哥特期（手工黑长袖衬衫）</h3>
-  <figure class="nophoto"><div class="nophoto-box">无自由授权照片<br><small>参考来源见下方链接</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/Disintegration" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
+  <figure class="nophoto"><div class="nophoto-box">暂未收录可用照片<br><small>不表示没有该造型；参考来源见下方</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/Disintegration" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
   <p class="items">经典哥特：乱发、涂开红唇、黑眼影、苍白； Prayer Tour 期间请裁缝做 5 件手工黑色长袖纽扣衬衫，每场穿一件（2019 悉尼重穿）。</p>
   <p class="evidence"><strong>证据：</strong>Robert 自述＋Bonhams/Oxfam 拍卖实物衬衫；高。</p>
   <p class="src"><a href="https://en.wikipedia.org/wiki/Disintegration" target="_blank" rel="noopener">资料来源 ↗</a></p>
@@ -142,7 +143,7 @@ dialog button{display:block;margin-left:auto;padding:8px 15px;border:1px solid v
 <article class="card" data-member="robert" data-search="Robert 1992 / 1996 / 2000 《Wish》/《Wild Mood Swings》/《Bloodflowers》 延续经典乱发红唇；1996 被拍到穿赛马针织衫等更花哨单品；2000 发布期一度未涂红唇、回归阴郁三部曲基调。 官方 MV《Friday I'm In Love》(1992)、媒体报道；中–高。">
   <div class="card-head"><span class="era">1992 / 1996 / 2000</span><span class="badge">Robert</span></div>
   <h3>《Wish》/《Wild Mood Swings》/《Bloodflowers》</h3>
-  <figure class="nophoto"><div class="nophoto-box">无自由授权照片<br><small>参考来源见下方链接</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/Wild_Mood_Swings" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
+  <figure class="nophoto"><div class="nophoto-box">暂未收录可用照片<br><small>不表示没有该造型；参考来源见下方</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/Wild_Mood_Swings" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
   <p class="items">延续经典乱发红唇；1996 被拍到穿赛马针织衫等更花哨单品；2000 发布期一度未涂红唇、回归阴郁三部曲基调。</p>
   <p class="evidence"><strong>证据：</strong>官方 MV《Friday I'm In Love》(1992)、媒体报道；中–高。</p>
   <p class="src"><a href="https://en.wikipedia.org/wiki/Wild_Mood_Swings" target="_blank" rel="noopener">资料来源 ↗</a></p>
@@ -195,18 +196,18 @@ dialog button{display:block;margin-left:auto;padding:8px 15px;border:1px solid v
   <p class="evidence"><strong>证据：</strong>2024 Troxy London 专题（CC BY 2.0，139 张含 Simon）；高。</p>
   <p class="src"><a href="https://commons.wikimedia.org/wiki/File:CureTroxy011124_(1_of_139)_(54115040160).jpg" target="_blank" rel="noopener">资料来源 ↗</a></p>
 </article>
-<article class="card" data-member="simon" data-search="Simon 1979–1982 首期「黑暗三部曲」（Seventeen Seconds / Faith / Pornography） 偏长蓬乱黑发、素色或格纹衬衫、casual 长裤、低挂贝斯；朴素阴郁，无统一制服。几乎不化妆。 Faith(1981)/Pornography(1982) 内页、1980 合照；中。">
+<article class="card" data-member="simon" data-search="Simon 1979–1982 首期「黑暗三部曲」（Seventeen Seconds / Faith / Pornography） 早期照片尚未补齐，不能用近年的素色上衣概括整个时期。补查线索：约 1982 年的皮夹克造型；本次未取得能核实年份与场合的照片，暂不确认具体款式或品牌。 皮夹克来自读者提供的线索，尚待照片核实；下方专辑链接仅供时期背景参考，不作为衣着证据。已撤回旧版‘几乎不化妆’的无充分依据概括。">
   <div class="card-head"><span class="era">1979–1982</span><span class="badge">Simon</span></div>
   <h3>首期「黑暗三部曲」（Seventeen Seconds / Faith / Pornography）</h3>
-  <figure class="nophoto"><div class="nophoto-box">无自由授权照片<br><small>参考来源见下方链接</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/Pornography_(The_Cure_album)" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
-  <p class="items">偏长蓬乱黑发、素色或格纹衬衫、casual 长裤、低挂贝斯；朴素阴郁，无统一制服。几乎不化妆。</p>
-  <p class="evidence"><strong>证据：</strong>Faith(1981)/Pornography(1982) 内页、1980 合照；中。</p>
+  <figure class="nophoto"><div class="nophoto-box">暂未收录可用照片<br><small>不表示没有该造型；参考来源见下方</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/Pornography_(The_Cure_album)" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
+  <p class="items">早期照片尚未补齐，不能用近年的素色上衣概括整个时期。补查线索：约 1982 年的皮夹克造型；本次未取得能核实年份与场合的照片，暂不确认具体款式或品牌。</p>
+  <p class="evidence"><strong>证据：</strong>皮夹克来自读者提供的线索，尚待照片核实；下方专辑链接仅供时期背景参考，不作为衣着证据。已撤回旧版‘几乎不化妆’的无充分依据概括。</p>
   <p class="src"><a href="https://en.wikipedia.org/wiki/Pornography_(The_Cure_album)" target="_blank" rel="noopener">资料来源 ↗</a></p>
 </article>
 <article class="card" data-member="simon" data-search="Simon 1985–1992 回归期（低调素衬衫＋《Friday》头纱 gag） 回归后发型利落、素色深色衬衫/针织衫、牛仔裤；不抢戏。《Friday I'm In Love》(1992) 结尾戏谑桥段头戴新娘头纱——非常态。 MV《Just Like Heaven》《Lovesong》《Pictures of You》《Friday I'm In Love》(© Fiction)；中–高。">
   <div class="card-head"><span class="era">1985–1992</span><span class="badge">Simon</span></div>
   <h3>回归期（低调素衬衫＋《Friday》头纱 gag）</h3>
-  <figure class="nophoto"><div class="nophoto-box">无自由授权照片<br><small>参考来源见下方链接</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/Friday_I%27m_in_Love" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
+  <figure class="nophoto"><div class="nophoto-box">暂未收录可用照片<br><small>不表示没有该造型；参考来源见下方</small></div><figcaption>参考：<a href="https://en.wikipedia.org/wiki/Friday_I%27m_in_Love" target="_blank" rel="noopener">来源链接</a></figcaption></figure>
   <p class="items">回归后发型利落、素色深色衬衫/针织衫、牛仔裤；不抢戏。《Friday I'm In Love》(1992) 结尾戏谑桥段头戴新娘头纱——非常态。</p>
   <p class="evidence"><strong>证据：</strong>MV《Just Like Heaven》《Lovesong》《Pictures of You》《Friday I'm In Love》(© Fiction)；中–高。</p>
   <p class="src"><a href="https://en.wikipedia.org/wiki/Friday_I%27m_in_Love" target="_blank" rel="noopener">资料来源 ↗</a></p>
